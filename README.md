@@ -85,5 +85,5 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 - [Laravel](https://laravel.com/)
 - [Filament](https://filamentadmin.com/)
-- [laravel-invoices ]([https://github.com/dompdf/dompdf](https://github.com/LaravelDaily/laravel-invoices)) for PDF generation
+- [laravel-invoices ](https://github.com/LaravelDaily/laravel-invoices) for PDF generation
 - [Simple QrCode](https://github.com/SimpleSoftwareIO/simple-qrcode) for QR code generation
