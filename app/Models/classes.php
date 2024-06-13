@@ -16,4 +16,8 @@ class classes extends Model
     public function sections() {
         return $this->hasMany(section::class, 'class_id');
     }
+
+    public function students() {
+        return $this->hasMany(Student::class, 'class_id');
+    }
 }

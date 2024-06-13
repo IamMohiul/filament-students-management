@@ -19,13 +19,18 @@ class ClassesResource extends Resource
 {
     protected static ?string $model = Classes::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
+
+    protected static ?string $navigationGroup = 'Academic Management';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('name')
+                ->required()
+                ->unique(ignoreRecord:true)
+
             ]);
     }
 
@@ -34,6 +39,11 @@ class ClassesResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                TextColumn::make('sections.name')
+                ->badge(),
+                TextColumn::make('students_count')
+                ->counts('students')
+                ->badge(),
             ])
             ->filters([
                 //
